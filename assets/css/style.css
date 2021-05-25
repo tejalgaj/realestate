@@ -1,0 +1,554 @@
+
+/* ===================================== Import Less ================================== */
+@font-face {
+  font-family: 'mouse-300';
+  src: url("../fonts/Montserrat-Regular.ttf") format("truetype"); }
+@font-face {
+  font-family: 'mouse-500';
+  src: url("../fonts/Montserrat-Bold.ttf") format("truetype"); }
+/* ===================================== Basic CSS ================================== */
+* {
+  margin: 0px;
+  padding: 0px;
+  list-style: none; }
+
+img {
+  max-width: 100%; }
+
+a {
+  text-decoration: none;
+  outline: none;
+  color: #444; }
+
+a:hover {
+  color: #444; }
+
+ul {
+  margin-bottom: 0;
+  padding-left: 0; }
+
+a:hover,
+a:focus,
+input,
+textarea {
+  text-decoration: none;
+  outline: none; }
+
+.center {
+  text-align: center; }
+
+.left {
+  text-align: left; }
+
+.right {
+  text-align: right; }
+
+.cp {
+  cursor: pointer; }
+
+html, body {
+  height: 100%; }
+
+p {
+  margin-bottom: 0px;
+  width: 100%; }
+
+.no-padding {
+  padding: 0px; }
+
+.no-margin {
+  margin: 0px; }
+
+.hid {
+  display: none; }
+
+.top-mar {
+  margin-top: 15px; }
+
+.h-100 {
+  height: 100%; }
+
+::placeholder {
+  color: #747f8a !important;
+  font-size: 13px;
+  opacity: .5 !important; }
+
+.container-fluid {
+  padding: 0px; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "mouse-500", Arial, Helvetica, sans-serif; }
+
+strong {
+  font-family: "mouse-500", Arial, Helvetica, sans-serif; }
+
+body {
+  background-color: #f7f7ff !important;
+  font-family: "mouse-300", Arial, Helvetica, sans-serif;
+  color: #171717; }
+
+.session-title {
+  padding: 30px;
+  margin: 0px; }
+  .session-title h2 {
+    width: 100%;
+    text-align: center; }
+  .session-title p {
+    max-width: 850px;
+    text-align: center;
+    float: none;
+    margin: auto; }
+  .session-title span {
+    float: right;
+    font-style: italic; }
+
+.inner-title {
+  padding: 20px;
+  padding-left: 0px;
+  margin-bottom: 30px; }
+  .inner-title h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600; }
+  .inner-title p {
+    width: 100%;
+    text-align: center; }
+
+.page-nav {
+  padding: 40px;
+  text-align: center;
+  padding-top: 160px; }
+  .page-nav ul {
+    float: none;
+    margin: auto; }
+  .page-nav h2 {
+    font-size: 36px;
+    width: 100%;
+    color: #444; }
+    @media screen and (max-width: 600px) {
+      .page-nav h2 {
+        font-size: 26px; } }
+  .page-nav ul li {
+    float: left;
+    margin-right: 10px;
+    margin-top: 10px;
+    font-size: 16px; }
+    .page-nav ul li i {
+      width: 30px;
+      text-align: center;
+      color: #444; }
+    .page-nav ul li a {
+      color: #444; }
+
+.btn-success {
+  background-color: #38ce6a;
+  border-color: #38ce6a; }
+  .btn-success:hover {
+    background-color: #38ce6a !important;
+    border-color: #38ce6a !important; }
+  .btn-success:active {
+    background-color: #38ce6a !important;
+    border-color: #38ce6a !important; }
+  .btn-success:focus {
+    background-color: #38ce6a !important;
+    border-color: #38ce6a !important;
+    box-shadow: none !important; }
+
+.btn-info {
+  background-color: #0363b0;
+  border-color: #0363b0; }
+  .btn-info:hover {
+    background-color: #0363b0 !important;
+    border-color: #0363b0 !important; }
+  .btn-info:active {
+    background-color: #0363b0 !important;
+    border-color: #0363b0 !important; }
+  .btn-info:focus {
+    background-color: #0363b0 !important;
+    border-color: #0363b0 !important;
+    box-shadow: none !important; }
+
+.btn {
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  border-radius: 2px; }
+
+.form-control:focus {
+  box-shadow: none !important;
+  border: 2px solid  #00a8df; }
+
+.btn-light {
+  background-color: #FFF;
+  color: #3F3F3F; }
+
+@media screen and (max-width: 1199px) {
+  .container {
+    max-width: 100%; } }
+.collapse.show {
+  display: block !important; }
+
+.form-control:focus {
+  box-shadow: none;
+  border: 2px solid #0d7a40 !important; }
+
+.form-control {
+  background-color: #F8F8F8;
+  margin-bottom: 20px; }
+  .form-control:focus {
+    background-color: #FFF;
+    border-color: #CCC; }
+
+/* ===================================== Header CSS ================================== */
+body {
+  overflow-x: hidden; }
+
+header {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  position: absolute;
+  width: 100%;
+  z-index: 999;
+  background-color: #FFF; }
+  header .header-top {
+    background-color: #38ce6a;
+    border-bottom: 1px solid #cccccc6b; }
+    header .header-top .left-item ul li {
+      float: left;
+      color: #fff;
+      padding: 10px 20px;
+      font-size: .9rem; }
+    header .header-top .right-item ul {
+      float: right; }
+      header .header-top .right-item ul li {
+        float: left;
+        color: #fff;
+        padding: 10px;
+        font-size: 1rem; }
+  header .header-nav .nav-item ul li {
+    float: left;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 30px; }
+    @media screen and (max-width: 916px) {
+      header .header-nav .nav-item ul li {
+        padding: 30px 20px; } }
+    @media screen and (max-width: 767px) {
+      header .header-nav .nav-item ul li {
+        float: none;
+        padding: 14px;
+        border-top: 1px solid #cccccc63; } }
+  header .header-nav .nav-img img {
+    width: 260px;
+    padding: 10px; }
+  header .scroll-to-fixed-fixed {
+    background-color: #FFF;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
+
+.small-menu {
+  float: right;
+  color: #38ce6a;
+  font-size: 32px;
+  margin-top: 23px;
+  margin-right: 12px; }
+
+/* ===================================== Slider CSS ================================== */
+.slider-detail {
+  padding-top: 130px; }
+  .slider-detail .carousel-caption {
+    text-align: left;
+    bottom: 110px; }
+    .slider-detail .carousel-caption h5 {
+      font-size: 44px;
+      margin-left: -40px; }
+    .slider-detail .carousel-caption p {
+      margin-left: -40px;
+      font-weight: 600;
+      margin-top: 40px;
+      font-size: 19px; }
+  .slider-detail .vbh {
+    margin-left: -40px; }
+    .slider-detail .vbh .btn {
+      padding: 10px;
+      margin-top: 40px;
+      font-weight: 600;
+      font-size: 18px; }
+  .slider-detail .vdg-cur {
+    color: #FFF; }
+
+/* ===================================== What we Offer CSS ================================== */
+.wat-we-offer {
+  padding: 50px;
+  background-color: #FFF; }
+  @media screen and (max-width: 940px) {
+    .wat-we-offer {
+      padding: 50px 10px; } }
+  .wat-we-offer .offer-cover {
+    border: 1px solid #38ce6a;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 30px;
+    border-radius: 5px; }
+    .wat-we-offer .offer-cover i {
+      font-size: 40px;
+      margin-bottom: 20px;
+      color: #38ce6a; }
+    .wat-we-offer .offer-cover:hover {
+      background-color: #38ce6a;
+      color: #FFF; }
+      .wat-we-offer .offer-cover:hover i {
+        color: #FFF; }
+
+/* ===================================== FAQ CSS ================================== */
+.faq {
+  padding: 50px; }
+  @media screen and (max-width: 940px) {
+    .faq {
+      padding: 50px 10px; } }
+  .faq .video iframe {
+    width: 100%;
+    height: 320px; }
+  .faq .collp h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px; }
+  .faq .accordion .card-header {
+    padding: 2px;
+    box-shadow: none;
+    background-color: #f7f7ff; }
+    .faq .accordion .card-header .btn {
+      box-shadow: none;
+      font-size: .9rem;
+      color: #444; }
+      .faq .accordion .card-header .btn:hover {
+        text-decoration: none; }
+      .faq .accordion .card-header .btn i {
+        margin-right: 10px;
+        color: #38ce6a; }
+  .faq .accordion .card-body {
+    font-size: .9rem; }
+  .faq .bus-count {
+    margin-top: 20px; }
+    .faq .bus-count .bus-coo {
+      margin: auto; }
+    .faq .bus-count .ccv {
+      text-align: center; }
+      .faq .bus-count .ccv b {
+        font-size: 42px;
+        color: #38ce6a; }
+      .faq .bus-count .ccv p {
+        font-size: .9rem; }
+
+/*====================================== Blog Style ====================================*/
+.our-blog {
+  padding: 50px;
+  background-color: #FFF;
+  padding-bottom: 100px; }
+  @media screen and (max-width: 940px) {
+    .our-blog {
+      padding: 50px 10px; } }
+  @media screen and (max-width: 600px) {
+    .our-blog {
+      padding: 20px 10px; }
+      .our-blog .blog-cont {
+        padding: 0px; }
+      .our-blog .blog-smk {
+        padding: 0px; } }
+  .our-blog .blog-cont {
+    float: none;
+    margin: auto; }
+  .our-blog .blog-single {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px; }
+    .our-blog .blog-single .figure {
+      margin-bottom: 0px; }
+  .our-blog .blog-single-det {
+    margin: auto;
+    padding: 20px;
+    z-index: 99;
+    box-shadow: 0 2px 6px 0 rgba(218, 218, 253, 0.65), 0 2px 6px 0 rgba(206, 206, 238, 0.54);
+    width: 90%;
+    position: relative;
+    margin-top: -80px;
+    background-color: #FFF; }
+    .our-blog .blog-single-det .btn {
+      margin-top: 10px;
+      margin-bottom: 10px; }
+    .our-blog .blog-single-det span {
+      font-size: 13px;
+      color: #b5316a; }
+    .our-blog .blog-single-det h6 {
+      font-size: 1.3rem; }
+    .our-blog .blog-single-det p {
+      margin-top: 15px;
+      margin-bottom: 15px;
+      font-size: 1rem; }
+
+/* ===================================== Testimonial Style  ================================== */
+.customer-serv {
+  padding: 60px; }
+  @media screen and (max-width: 600px) {
+    .customer-serv {
+      padding: 30px 10px; } }
+  .customer-serv .ro-clo {
+    padding: 30px 0px; }
+  .customer-serv .card-b::after {
+    box-sizing: border-box;
+    background-color: #FFF;
+    content: "";
+    position: absolute;
+    z-index: 100;
+    height: 25px;
+    left: 35px;
+    top: 76px;
+    transform: rotate(135deg);
+    width: 25px; }
+  .customer-serv .card-b {
+    box-shadow: 0 2px 6px 0 rgba(218, 218, 253, 0.65), 0 2px 6px 0 rgba(206, 206, 238, 0.54);
+    padding: 20px;
+    text-align: center;
+    font-size: 12px;
+    background: url(../images/quotes.png) no-repeat bottom right;
+    background-color: rgba(0, 0, 0, 0);
+    background-position-x: right;
+    background-position-y: bottom;
+    background-size: auto auto;
+    background-color: #FFF;
+    background-size: 40px;
+    background-position: right 10px bottom 5px; }
+  .customer-serv .an-mtc {
+    padding-top: 23px; }
+  .customer-serv .stars {
+    padding-top: 33px; }
+    .customer-serv .stars li {
+      list-style: none;
+      color: #f8b739;
+      float: right;
+      font-size: 13px;
+      margin-left: 4px; }
+  .customer-serv .img-circl {
+    margin-top: 20px;
+    text-align: center; }
+  .customer-serv .img-circl img {
+    width: 80%;
+    border-radius: 50%; }
+  @media screen and (max-width: 767px) {
+    .customer-serv .card-b {
+      margin-top: 20px; } }
+
+/* ===================================== Fooer CSS ================================== */
+.footer {
+  padding: 50px;
+  padding: 30px;
+  padding-bottom: 0px;
+  background-color: #38ce6a;
+  color: #fff; }
+  @media screen and (max-width: 940px) {
+    .footer {
+      padding: 50px 10px; } }
+  .footer h2 {
+    font-size: 26px;
+    margin-top: 10px; }
+  .footer p {
+    text-align: justify;
+    text-indent: 20px;
+    font-size: .9rem; }
+  .footer .link-list li {
+    padding: 10px;
+    border-bottom: 1px solid #ffffff63; }
+    .footer .link-list li a {
+      color: #FFF; }
+    .footer .link-list li i {
+      float: right; }
+  .footer .map-img {
+    font-weight: 600;
+    font-size: 17px;
+    padding-left: 20px; }
+  .footer address a {
+    color: #FFF; }
+
+.copy {
+  padding: 20px;
+  background-color: #1da74b;
+  color: #FFF; }
+  .copy a {
+    color: #FFF; }
+  .copy span {
+    float: right; }
+    .copy span i {
+      margin-right: 20px; }
+
+.kf-2 {
+  background-color: #FCFCFC;
+  padding: 50px; }
+  @media screen and (max-width: 940px) {
+    .kf-2 {
+      padding: 50px 10px; } }
+  .kf-2 .single-key {
+    box-shadow: 0 2px 3px 0 rgba(218, 218, 253, 0.35), 0 0px 3px 0 rgba(206, 206, 238, 0.35); }
+
+/* ===================================== About US CSS ================================== */
+.with-medical {
+  padding: 50px;
+  background-color: #FFF; }
+  @media screen and (max-width: 940px) {
+    .with-medical {
+      padding: 50px 10px; } }
+  .with-medical .txtr {
+    padding: 10px; }
+    .with-medical .txtr h4 {
+      font-size: 32px; }
+      .with-medical .txtr h4 span {
+        color: #71b61b; }
+    .with-medical .txtr p {
+      text-indent: 20px;
+      font-size: 1rem;
+      text-align: justify; }
+
+/* ===================================== Our Team CSS ================================== */
+.our-team {
+  padding: 50px;
+  background-color: #ffffffab; }
+  @media screen and (max-width: 940px) {
+    .our-team {
+      padding: 50px 10px; } }
+  .our-team .user-card {
+    background-color: #FFF;
+    padding: 10px;
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    border-radius: 2px;
+    margin-bottom: 20px; }
+    .our-team .user-card img {
+      width: 100%; }
+    .our-team .user-card .detfs {
+      text-align: center; }
+      .our-team .user-card .detfs ul {
+        margin-left: 10%;
+        width: 100%; }
+        .our-team .user-card .detfs ul li {
+          float: left;
+          padding: 10px;
+          font-size: 13px; }
+      .our-team .user-card .detfs p {
+        margin-top: 17px;
+        font-size: 0.9rem; }
+
+.testimony-video {
+  padding: 50px; }
+  @media screen and (max-width: 940px) {
+    .testimony-video {
+      padding: 50px 10px; } }
+  .testimony-video .text-vc {
+    margin-bottom: 20px; }
+    .testimony-video .text-vc iframe {
+      width: 100%;
+      height: 320px; }
+
+.contact-rooo {
+  padding: 50px;
+  background-color: #FFF; }
+  @media screen and (max-width: 940px) {
+    .contact-rooo {
+      padding: 50px 10px; } }
+  .contact-rooo label {
+    font-size: .9rem; }
+
+/*# sourceMappingURL=style.css.map */
